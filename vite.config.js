@@ -19,14 +19,12 @@ export default defineConfig({
                 'resources/css/responsive.css',
                 'resources/css/style1.css',
                 'resources/css/colors/default.css',
-
                 'resources/fonts/fontawesome-webfont3e6e.eot',
                 'resources/fonts/fontawesome-webfont3e6e.svg',
                 'resources/fonts/fontawesome-webfont3e6e.ttf',
                 'resources/fonts/fontawesome-webfont3e6e.woff',
                 'resources/fonts/fontawesome-webfont3e6e.woff2',
                 'resources/fonts/fontawesome-webfontd41d.eot',
-
                 'resources/js/animation.gsap.min.js',
                 'resources/js/bootstrap.min.js',
                 'resources/js/custom.js',
@@ -41,8 +39,6 @@ export default defineConfig({
                 'resources/js/ScrollToPlugin.min.js',
                 'resources/js/TimelineMax.min.js',
                 'resources/js/TweenMax.min.js',
-
-
                 'resources/vendors/themefy_icon/themify-icons.css',
                 'resources/vendors/niceselect/css/nice-select.css',
                 'resources/vendors/owl_carousel/css/owl.carousel.css',
@@ -63,7 +59,6 @@ export default defineConfig({
                 'resources/js/metisMenu.js',
                 'resources/js/chart.min.js',
                 'resources/js/custom.js',
-
                 'resources/vendors/count_up/jquery.waypoints.min.js',
                 'resources/vendors/chartlist/Chart.min.js',
                 'resources/vendors/count_up/jquery.counterup.min.js',
