@@ -137,7 +137,6 @@ class ApiAgentController extends Controller
                 'type' => $request->type,
                 'bathroom' => $request->bathroom,
                 'parking_space' => $request->parking_space,
-                'google_map_url' => $request->google_map_url,
                 'latitude' => $request->latitude,
                 'longitude' => $request->longitude,
             ]);
