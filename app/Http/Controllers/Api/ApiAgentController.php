@@ -76,7 +76,7 @@ class ApiAgentController extends Controller
     {
         $uid = auth()->user()->uid;
         $tours = Tours::where('agent_id', $uid)
-            ->with('tourProperty')
+            ->with(['tourProperty','agent'])
             ->get();
 
         return response()->json([

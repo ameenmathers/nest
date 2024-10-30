@@ -29,7 +29,6 @@ Route::get('/property-search', [AuthController::class, 'propertySearch']);
 Route::group(['prefix' => 'client', 'middleware' => ['auth:api', 'apiClient']], function() {
 
     Route::get('/dashboard', [ApiClientController::class, 'clientDashboard']);
-    Route::get('/schedule-tour-view/{pid}', [ApiClientController::class, 'tourView']);
     Route::post('/schedule-tour', [ApiClientController::class, 'scheduleTour']);
     Route::get('/tour-history', [ApiClientController::class, 'tourHistory']);
 

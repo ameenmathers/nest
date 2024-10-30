@@ -32,22 +32,6 @@ class ApiClientController extends Controller
         ]);
     }
 
-    public function tourView($pid)
-    {
-        try {
-            $property = Properties::with(['propertyAgent', 'images'])->findOrFail($pid);
-
-            return response()->json([
-                'property' => $property,
-            ]);
-        } catch (\Exception $exception) {
-            return response()->json([
-                'message' => 'Property not found.',
-                'error' => $exception->getMessage(),
-            ], 404);
-        }
-    }
-
     public function scheduleTour(ScheduleTourRequest $request)
     {
         try {
