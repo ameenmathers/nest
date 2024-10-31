@@ -46,6 +46,26 @@ class ApiAgentController extends Controller
         }
     }
 
+    public function markTourCompleted(Request $request, $trid)
+    {
+        try {
+            $tour = Tours::findOrFail($trid);
+            $tour->update([
+                'tour_status' => 'completed',
+            ]);
+
+            return response()->json([
+                'message' => 'Tour completed',
+                'tour' => $tour,
+            ]);
+        } catch (\Exception $exception) {
+            return response()->json([
+                'message' => 'Sorry, an error occurred. Please try again.',
+                'error' => $exception->getMessage(),
+            ], 500);
+        }
+    }
+
     public function rescheduleTour(Request $request, $trid)
     {
         $request->validate([

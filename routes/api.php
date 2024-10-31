@@ -38,6 +38,7 @@ Route::group(['prefix' => 'agent', 'middleware' => ['auth:api', 'apiAgent']], fu
 
     Route::get('/dashboard', [ApiAgentController::class, 'agentDashboard']);
     Route::post('/accept-scheduled-tour/{trid}', [ApiAgentController::class, 'acceptScheduledTour']);
+    Route::post('/mark-tour-completed/{trid}', [ApiAgentController::class, 'markTourCompleted']);
     Route::post('/reschedule-tour/{trid}', [ApiAgentController::class, 'rescheduleTour']);
     Route::get('/scheduled-tours', [ApiAgentController::class, 'scheduledTourHistory']);
     Route::get('/properties', [ApiAgentController::class, 'properties']);
