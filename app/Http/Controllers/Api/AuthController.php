@@ -83,7 +83,6 @@ class AuthController extends Controller
     public function propertySearch(Request $request)
     {
         $category = $request->input('category');
-        $type = $request->input('type');
         $district = $request->input('district');
         $price = $request->input('price');
         $bedrooms = $request->input('bedrooms');
@@ -92,10 +91,6 @@ class AuthController extends Controller
 
         if ($category) {
             $query->orWhereRaw('LOWER(category) = ?', [strtolower($category)]);
-        }
-
-        if ($type) {
-            $query->orWhereRaw('LOWER(type) = ?', [strtolower($type)]);
         }
 
         if ($district) {
