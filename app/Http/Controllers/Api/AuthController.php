@@ -74,7 +74,7 @@ class AuthController extends Controller
 
     public function properties()
     {
-        $properties = Properties::with('propertyAgent','features','amenities')->get();
+        $properties = Properties::with('propertyAgent','features','amenities','images')->get();
         return response()->json([
             'properties' => $properties,
         ]);
@@ -82,7 +82,7 @@ class AuthController extends Controller
 
     public function propertySearch(Request $request)
     {
-        $district = $request->input('district');
+
         $price = $request->input('price');
         $name = $request->input('name');
 
@@ -91,10 +91,6 @@ class AuthController extends Controller
 
         if ($name) {
             $query->orWhereRaw('LOWER(name) = ?', [strtolower($name)]);
-        }
-
-        if ($district) {
-            $query->orWhereRaw('LOWER(district) = ?', [strtolower($district)]);
         }
 
         if ($price) {
